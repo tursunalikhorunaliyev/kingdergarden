@@ -19,4 +19,4 @@ class Welcome extends StatelessWidget {
       ),
     );
   }
-} //https://www.figma.com/file/OPwZeBzxbLlWxH0AzFYEY6/Untitled?node-id=1-447&t=QSAcWTKtKuSvVmdL-0
+}
