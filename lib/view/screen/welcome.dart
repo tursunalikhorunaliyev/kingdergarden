@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:kingdergarden/view/custome/witgets.dart';
+import 'package:kingdergarden/view/custome/next.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -16,7 +14,7 @@ class Welcome extends StatelessWidget {
               "assets/images/first.png",
             ),
           ),
-          Next(),
+          const Next(),
         ],
       ),
     );
