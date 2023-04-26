@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kingdergarden/view/custome/next.dart';
+import 'package:kingdergarden/view/custome/custom_action_button.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -14,7 +14,11 @@ class Welcome extends StatelessWidget {
               "assets/images/first.png",
             ),
           ),
-          const Next(),
+          const CustomActionButton(
+            text: "Kirish",
+            isIcon: true,
+            iconPath: "assets/images/login.png",
+          ),
         ],
       ),
     );

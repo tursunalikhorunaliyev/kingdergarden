@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Next extends StatelessWidget {
-  const Next({super.key});
+class CustomActionButton extends StatelessWidget {
+  final String text;
+  final bool isIcon;
+  final String? iconPath;
+  const CustomActionButton({
+    super.key,
+    required this.text,
+    required this.isIcon,
+    this.iconPath = "",
+  });
 
   @override
   Widget build(BuildContext context) {
+    // bu yerda umuman padding bo'lmaydi chunki widget uning atrofidan joy tashlanishi
+    //mantiqiy no'to'gri chunki u boshqa padding kerak bo'lmagan joylarda ham ishlatilinishi mumkin
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Container(
