@@ -5,10 +5,12 @@ class CustomActionButton extends StatelessWidget {
   final String text;
   final bool isIcon;
   final String iconPath;
+  final double fontSize;
   const CustomActionButton({
     super.key,
     required this.text,
     required this.isIcon,
+    this.fontSize = 16,
     this.iconPath = "",
   });
 
@@ -29,7 +31,7 @@ class CustomActionButton extends StatelessWidget {
           Text(
             text,
             style: GoogleFonts.mulish(
-              fontSize: 16,
+              fontSize: fontSize,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),

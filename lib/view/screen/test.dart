@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:kingdergarden/view/custome/cunstom_search.dart';
+import 'package:kingdergarden/view/custome/bottomsheet.dart';
 
 class Test extends StatelessWidget {
   const Test({super.key});
@@ -9,10 +7,8 @@ class Test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.amber,
-      body: Center(
-        child: CustomSearch(),
-      ),
+      backgroundColor: Color.fromARGB(255, 240, 187, 187),
+      bottomSheet: CustomBottomsheet(),
     );
   }
 }

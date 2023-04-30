@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingdergarden/view/extra/app_const.dart';
 
 class CustomSearch extends StatelessWidget {
   const CustomSearch({super.key});
@@ -12,7 +13,7 @@ class CustomSearch extends StatelessWidget {
       height: 48,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
-        color: const Color(0xFFF8F6E9),
+        color: colorGrey,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

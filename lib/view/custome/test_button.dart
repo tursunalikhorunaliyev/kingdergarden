@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingdergarden/view/extra/app_const.dart';
 
 class TestButton extends StatelessWidget {
   final String text;
@@ -22,7 +23,7 @@ class TestButton extends StatelessWidget {
       height: 48,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(48),
-        color: isDark ? const Color(0xFF1E5662) : const Color(0xFFF8F6E9),
+        color: isDark ? const Color(0xFF1E5662) : colorGrey,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
