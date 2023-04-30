@@ -6,12 +6,13 @@ class AttendanceCard extends StatelessWidget {
   final int number;
   final String imagePath;
 
-  const AttendanceCard(
-      {super.key,
-      this.isGroup = false,
-      required this.title,
-      required this.number,
-      this.imagePath = "assets/images/group_icon.png"});
+  const AttendanceCard({
+    super.key,
+    this.isGroup = false,
+    required this.title,
+    required this.number,
+    this.imagePath = "assets/images/group_icon.png",
+  });
 
   @override
   Widget build(BuildContext context) {
