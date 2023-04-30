@@ -4,16 +4,23 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:kingdergarden/view/custome/activities_top.dart';
 
 class MainActivities extends StatelessWidget {
-  const MainActivities({super.key});
+  final String imagePath;
+  final String name;
+
+  const MainActivities({
+    super.key,
+    required this.imagePath,
+    required this.name,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: const [
+        children: [
           ActivitiesTop(
-            userName: "Abdurazzoqova Mubina",
-          )
+            userName: name,
+          ),
         ],
       ),
     );
