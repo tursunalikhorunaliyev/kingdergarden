@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:kingdergarden/view/custome/attendance.dart';
+import 'package:kingdergarden/view/custome/report.dart';
 import 'package:kingdergarden/view/custome/next.dart';
+import 'package:kingdergarden/view/custome/search.dart';
+import 'package:kingdergarden/view/custome/skip.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -8,14 +12,8 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [
-          Center(
-            child: Image.asset(
-              "assets/images/first.png",
-            ),
-          ),
-          const Next(),
-        ],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [],
       ),
     );
   }
