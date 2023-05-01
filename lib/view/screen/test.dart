@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kingdergarden/view/custome/activities_part_card.dart';
-import 'dart:ui';
-import 'package:kingdergarden/view/custome/bottomsheet.dart';
-import 'package:kingdergarden/view/custome/custom_action_button.dart';
 
 class Test extends StatelessWidget {
   const Test({super.key});
