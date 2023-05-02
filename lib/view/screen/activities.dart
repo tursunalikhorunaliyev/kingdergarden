@@ -3,6 +3,8 @@ import 'package:kingdergarden/view/custome/activities_top.dart';
 import 'package:kingdergarden/view/custome/activities_part_card.dart';
 import 'package:kingdergarden/view/custome/bottomsheet.dart';
 
+import '../extra/app_const.dart';
+
 class MainActivities extends StatelessWidget {
   final String imagePath;
   final String name;
@@ -23,39 +25,22 @@ class MainActivities extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           Expanded(
-            child: GridView.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
-              childAspectRatio: 0.79,
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              addAutomaticKeepAlives: true,
-              children: const [
-                ActivitiesPartCard(
-                  iconPath: "assets/images/breakfast.png",
-                  time: "01:12 - 01:45",
-                  title: "Nonushta",
+            child: GridView.builder(
+              itemCount: actIcons.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 16,
+                crossAxisSpacing: 16,
+                childAspectRatio: 0.79,
+              ),
+              itemBuilder: (context, index) {
+                return ActivitiesPartCard(
+                  iconPath: actIcons[index],
+                  time: actTimes[index],
+                  title: actTexts[index],
                   isTime: true,
-                ),
-                ActivitiesPartCard(
-                  iconPath: "assets/images/library.png",
-                  time: "01:12 - 01:45",
-                  title: "Logoped",
-                  isTime: true,
-                ),
-                ActivitiesPartCard(
-                  iconPath: "assets/images/ball.png",
-                  time: "01:12 - 01:45",
-                  title: "O'yin",
-                  isTime: true,
-                ),
-                ActivitiesPartCard(
-                  iconPath: "assets/images/dinner.png",
-                  time: "01:12 - 01:45",
-                  title: "Tushlik",
-                  isTime: true,
-                ),
-              ],
+                );
+              },
             ),
           ),
         ],
