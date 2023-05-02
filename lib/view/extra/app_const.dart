@@ -8,6 +8,24 @@ const List<String> titles = [
 ];
 const List<String> subtitles = [];
 
-const tappedColor = Color(0xFFFDD037);
-const defaultColor = Color(0xFF1E1E1E);
-const int index = 0;
+const List<String> actIcons = [
+  "assets/images/breakfast.png",
+  "assets/images/library.png",
+  "assets/images/ball.png",
+  "assets/images/dinner.png",
+  "assets/images/dinner.png",
+];
+const List<String> actTexts = [
+  "Nonushta",
+  "Logoped",
+  "O'yin",
+  "Tushlik",
+  "Tushlik",
+];
+const List<String> actTimes = [
+  "09:00 - 10:00",
+  "10:00 - 11:00",
+  "11:00 - 12:00",
+  "12:00 - 13:00",
+  "12:00 - 13:00",
+];
