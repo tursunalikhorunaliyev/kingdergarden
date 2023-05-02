@@ -12,16 +12,21 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
-      body: Stack(
-        children: [
-          Positioned(
-            child: Image.asset(
-              "assets/images/first.png",
-              fit: BoxFit.cover,
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: Stack(
+          children: [
+            Container(
+              width: double.infinity,
+              child: Image.asset(
+                "assets/images/first.png",
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          Positioned(
-            child: Container(
+            Container(
+              width: double.infinity,
+              height: double.infinity,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
