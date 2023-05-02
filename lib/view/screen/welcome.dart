@@ -8,6 +8,7 @@ import 'package:kingdergarden/view/custome/custom_action_button.dart';
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
 //.......
+////
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context).size;
