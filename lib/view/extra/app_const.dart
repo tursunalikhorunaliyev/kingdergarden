@@ -29,3 +29,5 @@ const List<String> actTimes = [
   "12:00 - 13:00",
   "12:00 - 13:00",
 ];
+const tappedColor = Color(0xFFFDD037);
+const defaultColor = Color(0xFF1E1E1E);

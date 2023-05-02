@@ -43,9 +43,9 @@ class MainActivities extends StatelessWidget {
               },
             ),
           ),
+          CustomBottomsheet(),
         ],
       ),
-      bottomSheet: CustomBottomsheet(),
     );
   }
 }
