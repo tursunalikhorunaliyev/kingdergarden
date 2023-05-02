@@ -10,22 +10,18 @@ class Welcome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: Stack(
-          children: [
-            Container(
-              width: double.infinity,
-              child: Image.asset(
-                "assets/images/first.png",
-                fit: BoxFit.cover,
-              ),
+      body: Stack(
+        children: [
+          Positioned(
+            child: Image.asset(
+              "assets/images/first.png",
+              fit: BoxFit.cover,
             ),
-            Container(
-              width: double.infinity,
-              height: double.infinity,
+          ),
+          Positioned(
+            child: Container(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -39,33 +35,56 @@ class Welcome extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              bottom: 200,
-              child: SizedBox(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Bog’cha mobil ilovasi",
-                      style: GoogleFonts.mulish(
-                        color: const Color(0xFF1E1E1E),
-                        fontSize: 24,
+          ),
+          Positioned(
+            bottom: 68,
+            left: 16,
+            right: 16,
+            child: SizedBox(
+              width: mediaQuery.width,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Bog’cha mobil ilovasi",
+                        style: GoogleFonts.mulish(
+                          color: const Color(0xFF1E1E1E),
+                          fontSize: 24,
+                        ),
                       ),
-                    ),
-                    Text(
-                      "Lorem ipsum dolor sit amet consectetur. Tellus eu mi\npraesent porta tempor euismod sodales lacus. Sodales\nid orci sit gravida quam nec.",
-                      style: GoogleFonts.mulish(
-                        color: const Color(0xFF1E1E1E),
-                        fontWeight: FontWeight.w300,
+                      Text(
+                        "Lorem ipsum dolor sit amet consectetur. Tellus eu mi\npraesent porta tempor euismod sodales lacus. Sodales\nid orci sit gravida quam nec.",
+                        style: GoogleFonts.mulish(
+                          color: const Color(0xFF1E1E1E),
+                          fontWeight: FontWeight.w300,
+                        ),
                       ),
-                    ),
-                    
-                  ],
-                ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 48,
+                  ),
+                  const CustomActionButton(
+                    text: "Davom etish",
+                    isIcon: true,
+                    iconPath: "assets/images/arrow_back.png",
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  const CustomActionButton(
+                    text: "O'tkazib yuborish",
+                    isIcon: false,
+                    isDark: false,
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

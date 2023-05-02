@@ -6,12 +6,14 @@ class CustomActionButton extends StatelessWidget {
   final bool isIcon;
   final String iconPath;
   final double fontSize;
+  final bool isDark;
   const CustomActionButton({
     super.key,
     required this.text,
     required this.isIcon,
     this.fontSize = 16,
     this.iconPath = "",
+    this.isDark = true,
   });
 
   @override
@@ -20,9 +22,8 @@ class CustomActionButton extends StatelessWidget {
     //mantiqiy no'to'gri chunki u boshqa padding kerak bo'lmagan joylarda ham ishlatilinishi mumkin
     return Container(
       height: 56,
-      width: double.infinity,
       decoration: BoxDecoration(
-        color: const Color(0xFF1E5662),
+        color: isDark ? const Color(0xFF1E5662) : const Color(0xFFF8F6E9),
         borderRadius: BorderRadius.circular(50),
       ),
       child: Row(
@@ -32,8 +33,8 @@ class CustomActionButton extends StatelessWidget {
             text,
             style: GoogleFonts.mulish(
               fontSize: fontSize,
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
+              fontWeight: FontWeight.normal,
+              color: isDark ? Colors.white : const Color(0xFF1E1E1E),
             ),
           ),
           isIcon
