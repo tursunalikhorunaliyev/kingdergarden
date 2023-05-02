@@ -7,3 +7,7 @@ const List<String> titles = [
   "Ota onalar uchun",
 ];
 const List<String> subtitles = [];
+
+const tappedColor = Color(0xFFFDD037);
+const defaultColor = Color(0xFF1E1E1E);
+const int index = 0;

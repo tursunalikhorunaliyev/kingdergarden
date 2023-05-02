@@ -3,6 +3,9 @@ import 'package:kingdergarden/view/screen/splash.dart';
 
 void main(List<String> args) {
   runApp(
-    const MaterialApp(debugShowCheckedModeBanner: false, home: Splash()),
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Splash(),
+    ),
   );
 }

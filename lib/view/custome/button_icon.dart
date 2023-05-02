@@ -5,10 +5,12 @@ import 'package:flutter/src/widgets/placeholder.dart';
 class ButtonIcon extends StatelessWidget {
   final String imagePath;
   final String textData;
+  final Color color;
   const ButtonIcon({
     super.key,
     required this.imagePath,
     required this.textData,
+    required this.color,
   });
 
   @override
@@ -19,15 +21,15 @@ class ButtonIcon extends StatelessWidget {
           imagePath,
           width: 28,
           height: 28,
-          color: Colors.black,
+          color: color,
         ),
         const SizedBox(
           height: 4,
         ),
         Text(
           textData,
-          style: const TextStyle(
-            color: Color(0xFF1E1E1E),
+          style: TextStyle(
+            color: color,
             fontSize: 12,
             fontWeight: FontWeight.w500,
           ),

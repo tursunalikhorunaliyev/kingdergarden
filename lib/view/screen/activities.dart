@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kingdergarden/view/custome/activities_top.dart';
 import 'package:kingdergarden/view/custome/activities_part_card.dart';
-import 'package:kingdergarden/view/custome/bottomsheet.dart';
+import 'package:kingdergarden/view/custome/custom_bottomsheet.dart';
 
 class MainActivities extends StatelessWidget {
   final String imagePath;
@@ -60,7 +60,7 @@ class MainActivities extends StatelessWidget {
           ),
         ],
       ),
-      bottomSheet: const CustomBottomsheet(),
+      bottomSheet: CustomBottomsheet(),
     );
   }
 }
