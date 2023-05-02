@@ -8,14 +8,12 @@ class CustomBottomsheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 90,
-      decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 255, 255, 255),
-      ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             ButtonIcon(

@@ -21,12 +21,15 @@ class ButtonIcon extends StatelessWidget {
           height: 28,
           color: Colors.black,
         ),
+        const SizedBox(
+          height: 4,
+        ),
         Text(
           textData,
           style: const TextStyle(
             color: Color(0xFF1E1E1E),
             fontSize: 12,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w500,
           ),
         )
       ],

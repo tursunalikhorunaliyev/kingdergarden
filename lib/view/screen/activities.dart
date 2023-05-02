@@ -21,9 +21,8 @@ class MainActivities extends StatelessWidget {
           ActivitiesTop(
             userName: name,
           ),
-          SizedBox(height: 24),
-          SizedBox(
-            height: 305,
+          const SizedBox(height: 24),
+          Expanded(
             child: GridView.count(
               crossAxisCount: 2,
               crossAxisSpacing: 16,
@@ -34,25 +33,25 @@ class MainActivities extends StatelessWidget {
               children: const [
                 ActivitiesPartCard(
                   iconPath: "assets/images/breakfast.png",
-                  time: "01 : 12",
+                  time: "01:12 - 01:45",
                   title: "Nonushta",
                   isTime: true,
                 ),
                 ActivitiesPartCard(
                   iconPath: "assets/images/library.png",
-                  time: "01 : 12",
+                  time: "01:12 - 01:45",
                   title: "Logoped",
                   isTime: true,
                 ),
                 ActivitiesPartCard(
                   iconPath: "assets/images/ball.png",
-                  time: "01 : 12",
+                  time: "01:12 - 01:45",
                   title: "O'yin",
                   isTime: true,
                 ),
                 ActivitiesPartCard(
                   iconPath: "assets/images/dinner.png",
-                  time: "01 : 12",
+                  time: "01:12 - 01:45",
                   title: "Tushlik",
                   isTime: true,
                 ),
@@ -61,7 +60,7 @@ class MainActivities extends StatelessWidget {
           ),
         ],
       ),
-      bottomSheet: CustomBottomsheet(),
+      bottomSheet: const CustomBottomsheet(),
     );
   }
 }

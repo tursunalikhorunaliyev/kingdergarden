@@ -22,7 +22,7 @@ class AttendanceCard extends StatelessWidget {
       height: 104,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
-        color: Color.fromARGB(255, 16, 50, 87),
+        color: const Color.fromARGB(255, 16, 50, 87),
       ),
       child: Padding(
         padding: EdgeInsets.only(left: 24, right: isGroup ? 24 : 21),

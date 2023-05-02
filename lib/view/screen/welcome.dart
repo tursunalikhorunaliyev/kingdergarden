@@ -1,13 +1,26 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:im_stepper/stepper.dart';
 import 'package:kingdergarden/view/custome/attendance.dart';
 import 'package:kingdergarden/view/custome/report.dart';
 import 'package:kingdergarden/view/custome/search.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kingdergarden/view/custome/custom_action_button.dart';
+import 'package:kingdergarden/view/custome/slide_text_panel.dart';
+import 'package:kingdergarden/view/extra/app_const.dart';
+import 'package:kingdergarden/view/screen/enter_profile.dart';
 
-class Welcome extends StatelessWidget {
+class Welcome extends StatefulWidget {
   const Welcome({super.key});
-//.......
+
+  @override
+  State<Welcome> createState() => _WelcomeState();
+}
+
+class _WelcomeState extends State<Welcome> {
+  final pageController = PageController();
+  int currentIndex = 0;
 ////
   @override
   Widget build(BuildContext context) {
@@ -46,40 +59,86 @@ class Welcome extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Bog’cha mobil ilovasi",
-                        style: GoogleFonts.mulish(
-                          color: const Color(0xFF1E1E1E),
-                          fontSize: 24,
-                        ),
+                  SizedBox(
+                    width: 64,
+                    height: 10,
+                    child: DotStepper(
+                      spacing: 5,
+                      dotCount: 3,
+                      shape: Shape.pipe,
+                      dotRadius: 15,
+                      indicatorDecoration: const IndicatorDecoration(
+                        color: Colors.black,
                       ),
-                      Text(
-                        "Lorem ipsum dolor sit amet consectetur. Tellus eu mi\npraesent porta tempor euismod sodales lacus. Sodales\nid orci sit gravida quam nec.",
-                        style: GoogleFonts.mulish(
-                          color: const Color(0xFF1E1E1E),
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                    ],
+                      indicator: Indicator.worm,
+                      activeStep: currentIndex,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    width: 358,
+                    height: 100,
+                    child: PageView.builder(
+                      controller: pageController,
+                      scrollDirection: Axis.horizontal,
+                      onPageChanged: (value) {
+                        currentIndex = value;
+                        setState(() {});
+                      },
+                      itemCount: titles.length,
+                      itemBuilder: (context, index) {
+                        return SlideTextPanel(
+                          title: titles[index],
+                          subtitle: "",
+                        );
+                      },
+                    ),
                   ),
                   const SizedBox(
                     height: 48,
                   ),
-                  const CustomActionButton(
-                    text: "Davom etish",
-                    isIcon: true,
-                    iconPath: "assets/images/arrow_back.png",
+                  GestureDetector(
+                    onTap: () {
+                      if (currentIndex != 2) {
+                        currentIndex++;
+                        pageController.animateToPage(
+                          currentIndex,
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.fastLinearToSlowEaseIn,
+                        );
+                        setState(() {});
+                      } else if (currentIndex == 2) {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const EnterProfile(),
+                          ),
+                        );
+                      }
+                    },
+                    child: const CustomActionButton(
+                      text: "Davom etish",
+                      isIcon: true,
+                      iconPath: "assets/images/arrow_back.png",
+                    ),
                   ),
                   const SizedBox(
                     height: 12,
                   ),
-                  const CustomActionButton(
-                    text: "O'tkazib yuborish",
-                    isIcon: false,
-                    isDark: false,
+                  GestureDetector(
+                    onTap: () => Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const EnterProfile(),
+                      ),
+                    ),
+                    child: const CustomActionButton(
+                      text: "O'tkazib yuborish",
+                      isIcon: false,
+                      isDark: false,
+                    ),
                   ),
                 ],
               ),
