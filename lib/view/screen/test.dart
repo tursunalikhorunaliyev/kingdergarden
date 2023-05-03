@@ -10,9 +10,8 @@ class Test extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          vertical: 68,
-          horizontal: 16,
+        padding: EdgeInsets.only(
+          top: 68,
         ),
         child: Archive(),
       ),
