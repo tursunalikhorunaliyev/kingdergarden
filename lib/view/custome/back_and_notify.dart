@@ -39,7 +39,7 @@ class BackAndNotify extends StatelessWidget {
               ? Positioned(
                   top: 4,
                   right: 6,
-                  child: notifyCount as int >= 1
+                  child: notifyCount >= 1
                       ? Container(
                           alignment: Alignment.center,
                           width: 16,
