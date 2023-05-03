@@ -29,5 +29,17 @@ const List<String> actTimes = [
   "12:00 - 13:00",
   "12:00 - 13:00",
 ];
+const List<String> guruhNomi = [
+  "Guruh-1",
+  "Guruh-2",
+  "Guruh-3",
+  "Guruh-4",
+];
+const List<int> guruxBolalarSoni = [
+  20,
+  15,
+  22,
+  25,
+];
 const tappedColor = Color(0xFFFDD037);
 const defaultColor = Color(0xFF1E1E1E);

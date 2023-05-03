@@ -7,7 +7,18 @@ class CustomListTile extends StatelessWidget {
   final Widget widget;
 
   final bool color2;
-  const CustomListTile({super.key, required this.widget, required this.color2});
+  final String iconPath;
+  final String text;
+  final String leadingIconPath;
+
+  const CustomListTile({
+    super.key,
+    required this.widget,
+    required this.color2,
+    required this.iconPath,
+    required this.text,
+    required this.leadingIconPath,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +41,7 @@ class CustomListTile extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(6.0),
                 child: Image.asset(
-                  "assets/images/Group.png",
+                  iconPath,
                   width: 42,
                   height: 42,
                 ),
@@ -44,7 +55,7 @@ class CustomListTile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "Guruh-1",
+                  text,
                   style: GoogleFonts.mulish(),
                 ),
                 widget,
@@ -52,7 +63,7 @@ class CustomListTile extends StatelessWidget {
             ),
             const Spacer(),
             Image.asset(
-              "assets/images/arrow-right.png",
+              leadingIconPath,
               width: 24,
               height: 24,
             )
