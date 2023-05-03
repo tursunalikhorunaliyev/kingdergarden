@@ -2,10 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:im_stepper/stepper.dart';
+<<<<<<< HEAD
 import 'package:kingdergarden/view/custome/attendance.dart';
 import 'package:kingdergarden/view/custome/report.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+=======
+>>>>>>> a74a4cd47ce2622810f171c5ddb5cae32aa77d14
 import 'package:kingdergarden/view/custome/custom_action_button.dart';
 import 'package:kingdergarden/view/custome/slide_text_panel.dart';
 import 'package:kingdergarden/view/extra/app_const.dart';
