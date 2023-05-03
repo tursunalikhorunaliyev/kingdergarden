@@ -15,7 +15,6 @@ class Davomat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log("qurildi");
     return Scaffold(
       body: Column(
         children: [
@@ -65,7 +64,7 @@ class Davomat extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(
-                      height: 24,
+                      height: 10,
                     ),
                     Expanded(
                       child: ListView.builder(
@@ -79,7 +78,7 @@ class Davomat extends StatelessWidget {
                               left: 16,
                             ),
                             child: CustomListTile(
-                              widget: Row(
+                              widgetSub: Row(
                                 children: [
                                   Image.asset(
                                     "assets/images/childIcon.png",
@@ -101,7 +100,11 @@ class Davomat extends StatelessWidget {
                               color2: false,
                               iconPath: "assets/images/group.png",
                               text: guruhNomi[index],
-                              leadingIconPath: "assets/images/arrow-right.png",
+                              leftWidget: Image.asset(
+                                "assets/images/arrow-right.png",
+                                width: 24,
+                                height: 24,
+                              ),
                             ),
                           );
                         },
@@ -109,8 +112,98 @@ class Davomat extends StatelessWidget {
                     ),
                   ],
                 ),
-                const ColoredBox(
-                  color: Colors.blue,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        Text(
+                          "Davomat: ",
+                          style: GoogleFonts.mulish(
+                            color: const Color(0xFF1E1E1E).withOpacity(0.4),
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          "40/45",
+                          style: GoogleFonts.mulish(
+                              color: const Color(0xFF1E1E1E), fontSize: 12),
+                        ),
+                        const Spacer(),
+                        Text(
+                          "Barchasini belgilash",
+                          style: GoogleFonts.mulish(
+                            color: const Color(0xFF1E5662),
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 16,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        padding: EdgeInsets.zero,
+                        itemCount: guruhNomi.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(
+                              bottom: 16,
+                              right: 16,
+                              left: 16,
+                            ),
+                            child: CustomListTile(
+                              widgetSub: Row(
+                                children: [
+                                  Text(
+                                    "Guruh: ",
+                                    style: GoogleFonts.mulish(
+                                      color: const Color(0xFF1E1E1E)
+                                          .withOpacity(0.4),
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                  Text(
+                                    guruxRaqami[index].toString(),
+                                    style: GoogleFonts.mulish(
+                                      color: const Color(0xFF1E1E1E),
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              color2: false,
+                              iconPath: "assets/images/group.png",
+                              text: ismFam[index],
+                              leftWidget: SizedBox(
+                                width: 24,
+                                height: 24,
+                                child: Transform.scale(
+                                  scale: 1.2,
+                                  child: Checkbox(
+                                    value: true,
+                                    onChanged: (value) {},
+                                    fillColor: const MaterialStatePropertyAll(
+                                      Color(0xFF33BDC6),
+                                    ),
+                                    activeColor: const Color(0xFF33BDC6),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

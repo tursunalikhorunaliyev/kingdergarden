@@ -61,6 +61,7 @@ class MainActivities extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: GridView.builder(
+                padding: const EdgeInsets.only(top: 24),
                 physics: const BouncingScrollPhysics(),
                 itemCount: actIcons.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

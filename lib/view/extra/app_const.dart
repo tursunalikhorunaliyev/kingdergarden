@@ -41,5 +41,23 @@ const List<int> guruxBolalarSoni = [
   22,
   25,
 ];
+const List<bool> checkboxTrue = [
+  true,
+  false,
+  true,
+  true,
+];
+const List<String> ismFam = [
+  "Nigora Xoshimova",
+  "Nuriya Rahimova",
+  "Shodibek Qo'loshev",
+  "maftuna Ahmadaliyeva",
+];
+const List<int> guruxRaqami = [
+  2,
+  2,
+  3,
+  4,
+];
 const tappedColor = Color(0xFFFDD037);
 const defaultColor = Color(0xFF1E1E1E);

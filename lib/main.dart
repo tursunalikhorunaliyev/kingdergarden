@@ -8,7 +8,7 @@ void main(List<String> args) {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Davomat(),
+      home: Splash(),
     ),
   );
 }
