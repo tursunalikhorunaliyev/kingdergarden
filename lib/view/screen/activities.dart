@@ -23,24 +23,27 @@ class MainActivities extends StatelessWidget {
           ActivitiesTop(
             userName: name,
           ),
-          const SizedBox(height: 24),
           Expanded(
-            child: GridView.builder(
-              itemCount: actIcons.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                mainAxisSpacing: 16,
-                crossAxisSpacing: 16,
-                childAspectRatio: 0.79,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: GridView.builder(
+                physics: const BouncingScrollPhysics(),
+                itemCount: actIcons.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 16,
+                  childAspectRatio: 0.79,
+                ),
+                itemBuilder: (context, index) {
+                  return ActivitiesPartCard(
+                    iconPath: actIcons[index],
+                    time: actTimes[index],
+                    title: actTexts[index],
+                    isTime: true,
+                  );
+                },
               ),
-              itemBuilder: (context, index) {
-                return ActivitiesPartCard(
-                  iconPath: actIcons[index],
-                  time: actTimes[index],
-                  title: actTexts[index],
-                  isTime: true,
-                );
-              },
             ),
           ),
           CustomBottomsheet(),
