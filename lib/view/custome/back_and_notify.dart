@@ -5,9 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 class BackAndNotify extends StatelessWidget {
   final bool isNotify;
-  final String notifyCount;
-  const BackAndNotify(
-      {super.key, required this.isNotify, this.notifyCount = "0"});
+  final int notifyCount;
+  final bool isDark;
+  const BackAndNotify({
+    super.key,
+    required this.isNotify,
+    this.notifyCount = 0,
+    required this.isDark,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,22 +39,24 @@ class BackAndNotify extends StatelessWidget {
               ? Positioned(
                   top: 4,
                   right: 6,
-                  child: Container(
-                    alignment: Alignment.center,
-                    width: 16,
-                    height: 16,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFFF0000),
-                      shape: BoxShape.circle,
-                    ),
-                    child: Text(
-                      notifyCount.length == 3 ? "99+" : notifyCount,
-                      style: GoogleFonts.mulish(
-                        color: const Color(0xFFFFFFFF),
-                        fontSize: notifyCount.length == 3 ? 8 : 10,
-                      ),
-                    ),
-                  ),
+                  child: notifyCount as int >= 1
+                      ? Container(
+                          alignment: Alignment.center,
+                          width: 16,
+                          height: 16,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFFFF0000),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Text(
+                            notifyCount > 99 ? "99+" : notifyCount.toString(),
+                            style: GoogleFonts.mulish(
+                              color: const Color(0xFFFFFFFF),
+                              fontSize: notifyCount > 99 ? 8 : 10,
+                            ),
+                          ),
+                        )
+                      : SizedBox(),
                 )
               : const SizedBox(),
         ],
