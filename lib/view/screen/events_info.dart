@@ -18,6 +18,8 @@ class EventInfo extends StatelessWidget {
               children: [
                 const BackAndNotify(
                   isNotify: false,
+                  notifyCount: 0,
+                  isDark: true,
                 ),
                 Text(
                   "Nonushta",
@@ -29,7 +31,8 @@ class EventInfo extends StatelessWidget {
                 ),
                 const BackAndNotify(
                   isNotify: true,
-                  notifyCount: "0",
+                  notifyCount: 0,
+                  isDark: true,
                 ),
               ],
             ),
