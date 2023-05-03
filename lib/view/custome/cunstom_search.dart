@@ -47,7 +47,7 @@ class CustomSearch extends StatelessWidget {
                 borderRadius: BorderRadius.circular(124),
               ),
               child: Image.asset(
-                "assets/images/Search.png",
+                "assets/images/search.png",
                 width: 24,
                 height: 24,
               ),

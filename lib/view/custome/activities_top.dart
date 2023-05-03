@@ -2,15 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingdergarden/view/custome/back_and_notify.dart';
 import 'package:kingdergarden/view/extra/app_const.dart';
 
 class ActivitiesTop extends StatelessWidget {
   final String userName;
   final String kinderGardenName;
+  final Widget widget;
+  final double bottom;
+  final double left;
+  final double right;
   const ActivitiesTop({
     super.key,
     required this.userName,
     this.kinderGardenName = "Paxtaoy bog’chasi",
+    required this.widget,
+    required this.bottom,
+    required this.left,
+    required this.right,
   });
 
   @override
@@ -57,45 +66,29 @@ class ActivitiesTop extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 124,
-          right: 124,
-          bottom: 16,
-          child: Container(
-            alignment: Alignment.center,
-            width: double.infinity,
-            height: 48,
-            decoration: BoxDecoration(
-              color: colorGrey,
-              borderRadius: BorderRadius.circular(48),
-            ),
-            child: Text(
-              "Davomad olish",
-              style: GoogleFonts.mulish(
-                fontSize: 14,
-                color: const Color(0xFF1E1E1E),
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
+          bottom: bottom,
+          right: right,
+          left: left,
+          child: widget,
         ),
         Positioned(
-          right: 16,
-          bottom: 178,
-          child: Container(
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: colorGrey,
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                "assets/images/activities_notification.png",
-                width: 24,
-                height: 24,
-              ),
-            ),
-          ),
-        ),
+            top: 68,
+            right: 16,
+            left: 16,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                BackAndNotify(
+                  isNotify: false,
+                  isDark: true,
+                ),
+                BackAndNotify(
+                  isNotify: true,
+                  isDark: true,
+                  notifyCount: 100,
+                ),
+              ],
+            )),
       ],
     );
   }
