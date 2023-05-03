@@ -31,7 +31,7 @@ class _CustomBottomsheetState extends State<CustomBottomsheet> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            GestureDetector(
+            InkWell(
               onTap: () {
                 index0 = true;
                 index1 = false;
@@ -46,7 +46,7 @@ class _CustomBottomsheetState extends State<CustomBottomsheet> {
                 color: index0 ? tappedColor : defaultColor,
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 index0 = false;
                 index1 = true;
@@ -60,7 +60,7 @@ class _CustomBottomsheetState extends State<CustomBottomsheet> {
                 color: index1 ? tappedColor : defaultColor,
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 index0 = false;
                 index1 = false;
@@ -74,7 +74,7 @@ class _CustomBottomsheetState extends State<CustomBottomsheet> {
                 color: index2 ? tappedColor : defaultColor,
               ),
             ),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 index0 = false;
                 index1 = false;
