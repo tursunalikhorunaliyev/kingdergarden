@@ -13,15 +13,14 @@ class BackAndNotify extends StatelessWidget {
     this.notifyCount = 0,
     required this.isDark,
   });
-///////////
+
   @override
   Widget build(BuildContext context) {
-    double fontSize = 10;
     return Container(
       width: 36,
       height: 36,
-      decoration: const BoxDecoration(
-        color: Color(0xFF33BDC6),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF33BDC6) : const Color(0xFFF8F6E8),
         shape: BoxShape.circle,
       ),
       child: Stack(
@@ -33,6 +32,7 @@ class BackAndNotify extends StatelessWidget {
                   : "assets/images/arrow-left.png",
               width: 24,
               height: 24,
+              color: isDark ? const Color(0xFFF8F6E8) : const Color(0xFF33BDC6),
             ),
           ),
           isNotify
@@ -56,7 +56,7 @@ class BackAndNotify extends StatelessWidget {
                             ),
                           ),
                         )
-                      : SizedBox(),
+                      : const SizedBox(),
                 )
               : const SizedBox(),
         ],

@@ -13,11 +13,14 @@ class Davomat extends StatelessWidget {
       body: Column(
         children: const [
           ActivitiesTop(
+            isSingle: false,
             userName: "Abdurazzoqova Mubina",
             bottom: 16,
             left: 16,
             right: 16,
             widget: CustomSearch(),
+            smsCount: 0,
+            isNotifyDark: true,
           ),
         ],
       ),

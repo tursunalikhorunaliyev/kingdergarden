@@ -3,6 +3,7 @@ import 'package:kingdergarden/view/custome/activities_top.dart';
 import 'package:kingdergarden/view/custome/activities_part_card.dart';
 import 'package:kingdergarden/view/custome/custom_bottomsheet.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingdergarden/view/screen/davomat.dart';
 import '../extra/app_const.dart';
 
 class MainActivities extends StatelessWidget {
@@ -24,21 +25,34 @@ class MainActivities extends StatelessWidget {
             bottom: 16,
             left: 124,
             right: 124,
+            isSingle: true,
+            smsCount: 0,
             userName: name,
-            widget: Container(
-              alignment: Alignment.center,
-              width: double.infinity,
-              height: 48,
-              decoration: BoxDecoration(
-                color: colorGrey,
-                borderRadius: BorderRadius.circular(48),
-              ),
-              child: Text(
-                "Davomad olish",
-                style: GoogleFonts.mulish(
-                  fontSize: 14,
-                  color: const Color(0xFF1E1E1E),
-                  fontWeight: FontWeight.w500,
+            isNotifyDark: false,
+            widget: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Davomat(),
+                  ),
+                );
+              },
+              child: Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                height: 48,
+                decoration: BoxDecoration(
+                  color: colorGrey,
+                  borderRadius: BorderRadius.circular(48),
+                ),
+                child: Text(
+                  "Davomad olish",
+                  style: GoogleFonts.mulish(
+                    fontSize: 14,
+                    color: const Color(0xFF1E1E1E),
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             ),

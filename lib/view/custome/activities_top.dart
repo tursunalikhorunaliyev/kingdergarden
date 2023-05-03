@@ -1,7 +1,9 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'package:kingdergarden/view/custome/back_and_notify.dart';
 import 'package:kingdergarden/view/extra/app_const.dart';
 
@@ -12,15 +14,21 @@ class ActivitiesTop extends StatelessWidget {
   final double bottom;
   final double left;
   final double right;
+  final bool isSingle;
+  final int smsCount;
+  final bool isNotifyDark;
   const ActivitiesTop({
-    super.key,
+    Key? key,
     required this.userName,
     this.kinderGardenName = "Paxtaoy bog’chasi",
     required this.widget,
     required this.bottom,
     required this.left,
     required this.right,
-  });
+    required this.isSingle,
+    required this.smsCount,
+    required this.isNotifyDark,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,15 +85,17 @@ class ActivitiesTop extends StatelessWidget {
             left: 16,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                BackAndNotify(
-                  isNotify: false,
-                  isDark: true,
-                ),
+              children: [
+                isSingle
+                    ? const SizedBox()
+                    : const BackAndNotify(
+                        isNotify: false,
+                        isDark: true,
+                      ),
                 BackAndNotify(
                   isNotify: true,
-                  isDark: true,
-                  notifyCount: 100,
+                  isDark: isNotifyDark,
+                  notifyCount: smsCount,
                 ),
               ],
             )),
