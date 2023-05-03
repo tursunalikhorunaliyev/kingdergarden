@@ -25,10 +25,11 @@ class _CustomBottomsheetState extends State<CustomBottomsheet> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 90,
+      height: 80,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             InkWell(
