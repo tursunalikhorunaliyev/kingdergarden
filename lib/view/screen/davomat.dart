@@ -78,6 +78,7 @@ class Davomat extends StatelessWidget {
                               left: 16,
                             ),
                             child: CustomListTile(
+                              iconIsFull: false,
                               widgetSub: Row(
                                 children: [
                                   Image.asset(
@@ -161,6 +162,7 @@ class Davomat extends StatelessWidget {
                               left: 16,
                             ),
                             child: CustomListTile(
+                              iconIsFull: false,
                               widgetSub: Row(
                                 children: [
                                   Text(

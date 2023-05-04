@@ -14,6 +14,7 @@ class MainActivities extends StatelessWidget {
     super.key,
     required this.imagePath,
     required this.name,
+    required,
   });
 
   @override

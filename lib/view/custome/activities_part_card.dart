@@ -86,12 +86,15 @@ class ActivitiesPartCard extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            const SizedBox(
+            SizedBox(
               height: 36,
-              child: CustomActionButton(
-                text: "Boshlash",
-                isIcon: false,
-                fontSize: 14,
+              child: GestureDetector(
+                onTap: () {},
+                child: const CustomActionButton(
+                  text: "Boshlash",
+                  isIcon: false,
+                  fontSize: 14,
+                ),
               ),
             )
           ],
