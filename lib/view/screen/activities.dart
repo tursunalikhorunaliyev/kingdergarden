@@ -4,6 +4,7 @@ import 'package:kingdergarden/view/custome/activities_part_card.dart';
 import 'package:kingdergarden/view/custome/custom_bottomsheet.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kingdergarden/view/screen/davomat.dart';
+import 'package:kingdergarden/view/screen/events_info.dart';
 import '../extra/app_const.dart';
 
 class MainActivities extends StatelessWidget {

@@ -34,23 +34,27 @@ const List<String> guruhNomi = [
   "Guruh-2",
   "Guruh-3",
   "Guruh-4",
+  "Guruh-5",
+  "Guruh-6",
+  "Guruh-7",
 ];
 const List<int> guruxBolalarSoni = [
   20,
   15,
   22,
   25,
+  22,
+  21,
+  20,
 ];
-const List<bool> checkboxTrue = [
-  true,
-  false,
-  true,
-  true,
-];
+
 const List<String> ismFam = [
   "Nigora Xoshimova",
   "Nuriya Rahimova",
   "Shodibek Qo'loshev",
+  "maftuna Ahmadaliyeva",
+  "maftuna Ahmadaliyeva",
+  "maftuna Ahmadaliyeva",
   "maftuna Ahmadaliyeva",
 ];
 const List<int> guruxRaqami = [
@@ -58,6 +62,9 @@ const List<int> guruxRaqami = [
   2,
   3,
   4,
+  5,
+  6,
+  7,
 ];
 const List<String> yozishmalarIsmFam = [
   "Dildora Xoshimova",

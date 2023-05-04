@@ -6,9 +6,11 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kingdergarden/view/custome/activities_top.dart';
 import 'package:kingdergarden/view/custome/cunstom_search.dart';
+import 'package:kingdergarden/view/custome/custom_action_button.dart';
 import 'package:kingdergarden/view/custome/custom_listtile.dart';
 import 'package:kingdergarden/view/custome/parts_tabs.dart';
 import 'package:kingdergarden/view/extra/app_const.dart';
+import 'package:kingdergarden/view/screen/events_info.dart';
 
 class Davomat extends StatelessWidget {
   const Davomat({super.key});
@@ -68,6 +70,7 @@ class Davomat extends StatelessWidget {
                     ),
                     Expanded(
                       child: ListView.builder(
+                        physics: const BouncingScrollPhysics(),
                         padding: EdgeInsets.zero,
                         itemCount: guruhNomi.length,
                         itemBuilder: (context, index) {
@@ -151,58 +154,83 @@ class Davomat extends StatelessWidget {
                       height: 10,
                     ),
                     Expanded(
-                      child: ListView.builder(
-                        padding: EdgeInsets.zero,
-                        itemCount: guruhNomi.length,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(
-                              bottom: 16,
-                              right: 16,
-                              left: 16,
-                            ),
-                            child: CustomListTile(
-                              iconIsFull: false,
-                              widgetSub: Row(
-                                children: [
-                                  Text(
-                                    "Guruh: ",
-                                    style: GoogleFonts.mulish(
-                                      color: const Color(0xFF1E1E1E)
-                                          .withOpacity(0.4),
-                                      fontSize: 14,
-                                    ),
+                      child: Stack(
+                        children: [
+                          ListView.builder(
+                            physics: const BouncingScrollPhysics(),
+                            padding: EdgeInsets.zero,
+                            itemCount: guruhNomi.length,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: const EdgeInsets.only(
+                                  bottom: 16,
+                                  right: 16,
+                                  left: 16,
+                                ),
+                                child: CustomListTile(
+                                  iconIsFull: false,
+                                  widgetSub: Row(
+                                    children: [
+                                      Text(
+                                        "Guruh: ",
+                                        style: GoogleFonts.mulish(
+                                          color: const Color(0xFF1E1E1E)
+                                              .withOpacity(0.4),
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      Text(
+                                        guruxRaqami[index].toString(),
+                                        style: GoogleFonts.mulish(
+                                          color: const Color(0xFF1E1E1E),
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    guruxRaqami[index].toString(),
-                                    style: GoogleFonts.mulish(
-                                      color: const Color(0xFF1E1E1E),
-                                      fontSize: 14,
+                                  color2: false,
+                                  iconPath: "assets/images/group.png",
+                                  text: ismFam[index],
+                                  leftWidget: SizedBox(
+                                    width: 24,
+                                    height: 24,
+                                    child: Transform.scale(
+                                      scale: 1.2,
+                                      child: Checkbox(
+                                        value: true,
+                                        onChanged: (value) {},
+                                        fillColor:
+                                            const MaterialStatePropertyAll(
+                                          Color(0xFF33BDC6),
+                                        ),
+                                        activeColor: const Color(0xFF33BDC6),
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              color2: false,
-                              iconPath: "assets/images/group.png",
-                              text: ismFam[index],
-                              leftWidget: SizedBox(
-                                width: 24,
-                                height: 24,
-                                child: Transform.scale(
-                                  scale: 1.2,
-                                  child: Checkbox(
-                                    value: true,
-                                    onChanged: (value) {},
-                                    fillColor: const MaterialStatePropertyAll(
-                                      Color(0xFF33BDC6),
-                                    ),
-                                    activeColor: const Color(0xFF33BDC6),
                                   ),
                                 ),
+                              );
+                            },
+                          ),
+                          Positioned(
+                            left: 16,
+                            right: 16,
+                            bottom: 68,
+                            child: GestureDetector(
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const EventInfo(),
+                                ),
+                              ),
+                              child: const CustomActionButton(
+                                text: "Davom etish",
+                                isIcon: true,
+                                iconPath: "assets/images/arrow_back.png",
+                                isDark: true,
                               ),
                             ),
-                          );
-                        },
+                          )
+                        ],
                       ),
                     ),
                   ],
