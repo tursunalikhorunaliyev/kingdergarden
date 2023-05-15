@@ -86,3 +86,16 @@ const List<String> yozishmalarSubTitle = [
 ];
 const tappedColor = Color(0xFFFDD037);
 const defaultColor = Color(0xFF1E1E1E);
+
+const List<String> settingsWidgetText = [
+  "Til",
+  "Texnik yordam",
+  "Foydalanish shartlari",
+  "Xavfsizlic siyosati",
+];
+const List<String> settingsWidgetIconPath = [
+  "assets/images/translate.png",
+  "assets/images/texnikYordam.png",
+  "assets/images/usingS.png",
+  "assets/images/security.png",
+];

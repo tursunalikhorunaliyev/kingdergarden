@@ -5,14 +5,19 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CustomSettingsWidget extends StatelessWidget {
   final String imageIconPath;
+  final String text;
+  final bool isMarginTop;
   const CustomSettingsWidget({
     super.key,
     required this.imageIconPath,
+    required this.text,
+    this.isMarginTop = true,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: isMarginTop ? 16 : 0),
       width: MediaQuery.of(context).size.width,
       height: 56,
       decoration: BoxDecoration(
@@ -41,7 +46,7 @@ class CustomSettingsWidget extends StatelessWidget {
               width: 12,
             ),
             Text(
-              "Til",
+              text,
               style: GoogleFonts.mulish(
                 color: const Color(0xFF1E1E1E),
                 fontWeight: FontWeight.w600,
