@@ -39,6 +39,7 @@ class ActivitiesTop extends StatelessWidget {
           top: 128,
           left: 16,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 kinderGardenName,
@@ -80,25 +81,26 @@ class ActivitiesTop extends StatelessWidget {
           child: widget,
         ),
         Positioned(
-            top: 68,
-            right: 16,
-            left: 16,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                isSingle
-                    ? const SizedBox()
-                    : const BackAndNotify(
-                        isNotify: false,
-                        isDark: true,
-                      ),
-                BackAndNotify(
-                  isNotify: true,
-                  isDark: isNotifyDark,
-                  notifyCount: smsCount,
-                ),
-              ],
-            )),
+          top: 68,
+          right: 16,
+          left: 16,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              isSingle
+                  ? const SizedBox()
+                  : const BackAndNotify(
+                      isNotify: false,
+                      isDark: true,
+                    ),
+              BackAndNotify(
+                isNotify: true,
+                isDark: isNotifyDark,
+                notifyCount: smsCount,
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

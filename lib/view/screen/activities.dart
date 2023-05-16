@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:kingdergarden/view/custome/activities_top.dart';
 import 'package:kingdergarden/view/custome/activities_part_card.dart';
+import 'package:kingdergarden/view/custome/custom_action_button.dart';
+import 'package:kingdergarden/view/custome/custom_alert.dart';
 import 'package:kingdergarden/view/custome/custom_bottomsheet.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kingdergarden/view/screen/davomat.dart';
 import 'package:kingdergarden/view/screen/events_info.dart';
 import '../extra/app_const.dart';
+import 'package:kingdergarden/view/custome/custom_blur_activities_container.dart';
 
 class MainActivities extends StatelessWidget {
   final String imagePath;
   final String name;
-
+  final bool davomatOlinganmi;
   const MainActivities({
     super.key,
     required this.imagePath,
     required this.name,
-    required,
+    this.davomatOlinganmi = false,
   });
 
   @override
@@ -33,10 +36,15 @@ class MainActivities extends StatelessWidget {
             isNotifyDark: false,
             widget: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Davomat(),
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 32, horizontal: 15),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    content: const CustomActivitiesConatainer(),
                   ),
                 );
               },
