@@ -4,12 +4,13 @@ import 'package:kingdergarden/view/screen/events_info.dart';
 import 'package:kingdergarden/view/screen/splash.dart';
 import 'package:kingdergarden/view/screen/settings.dart';
 import 'package:kingdergarden/view/screen/test.dart';
+import 'package:kingdergarden/view/screen/activities_blur.dart';
 
 void main(List<String> args) {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Settings(),
+      home: ActivitiesBlur(),
     ),
   );
 }
