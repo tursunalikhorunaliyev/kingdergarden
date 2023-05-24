@@ -58,8 +58,8 @@ class _WelcomeState extends State<Welcome> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: double.infinity,
-                    height: double.infinity,
+                    width: 60,
+                    height: 10,
                     child: DotStepper(
                       spacing: 5,
                       dotCount: 3,
@@ -76,7 +76,6 @@ class _WelcomeState extends State<Welcome> {
                     height: 20,
                   ),
                   SizedBox(
-                    width: 358,
                     height: 100,
                     child: PageView.builder(
                       controller: pageController,

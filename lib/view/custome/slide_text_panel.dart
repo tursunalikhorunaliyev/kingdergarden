@@ -28,11 +28,14 @@ class SlideTextPanel extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        Text(
-          "Lorem ipsum dolor sit amet consectetur. Tellus eu mi\npraesent porta tempor euismod sodales lacus. Sodales\nid orci sit gravida quam nec.",
-          style: GoogleFonts.mulish(
-            color: const Color(0xFF1E1E1E),
-            fontWeight: FontWeight.w300,
+        SizedBox(
+          width: double.infinity,
+          child: Text(
+            "Lorem ipsum dolor sit amet consectetur. Tellus eu mipraesent porta tempor euismod sodales lacus. Sodalesid orci sit gravida quam nec.",
+            style: GoogleFonts.mulish(
+              color: const Color(0xFF1E1E1E),
+              fontWeight: FontWeight.w300,
+            ),
           ),
         ),
       ],
