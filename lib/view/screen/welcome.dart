@@ -24,7 +24,9 @@ class _WelcomeState extends State<Welcome> {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned(
+          Container(
+            width: double.infinity,
+            height: double.infinity,
             child: Image.asset(
               "assets/images/first.png",
               fit: BoxFit.cover,
@@ -56,8 +58,8 @@ class _WelcomeState extends State<Welcome> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 64,
-                    height: 10,
+                    width: double.infinity,
+                    height: double.infinity,
                     child: DotStepper(
                       spacing: 5,
                       dotCount: 3,
