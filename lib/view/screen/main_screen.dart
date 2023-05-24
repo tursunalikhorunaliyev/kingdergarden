@@ -18,7 +18,7 @@ class MainScreen extends StatelessWidget {
           return Column(
             children: [
               Expanded(child: changeMainPanel(state)),
-              const CustomeBottomSheet()
+              const CustomBottomSheet()
             ],
           );
         },

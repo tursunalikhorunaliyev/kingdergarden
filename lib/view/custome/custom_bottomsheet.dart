@@ -4,8 +4,8 @@ import 'package:kingdergarden/view/controller/bloc/bloc/main_screen_bloc.dart';
 import 'package:kingdergarden/view/custome/button_icon.dart';
 import 'package:kingdergarden/view/extra/app_const.dart';
 
-class CustomeBottomSheet extends StatelessWidget {
-  const CustomeBottomSheet({super.key});
+class CustomBottomSheet extends StatelessWidget {
+  const CustomBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
