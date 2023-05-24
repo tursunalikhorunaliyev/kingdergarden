@@ -1,26 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kingdergarden/view/controller/bloc/bloc/main_screen_bloc.dart';
 import 'package:kingdergarden/view/custome/button_icon.dart';
 import 'package:kingdergarden/view/extra/app_const.dart';
 
-class CustomBottomsheet extends StatefulWidget {
-  CustomBottomsheet({
-    super.key,
-  });
-
-  @override
-  State<CustomBottomsheet> createState() => _CustomBottomsheetState();
-}
-
-class _CustomBottomsheetState extends State<CustomBottomsheet> {
-  bool index0 = true;
-
-  bool index1 = false;
-
-  bool index2 = false;
-
-  bool index3 = false;
+class CustomeBottomSheet extends StatelessWidget {
+  const CustomeBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,59 +19,44 @@ class _CustomBottomsheetState extends State<CustomBottomsheet> {
           children: [
             InkWell(
               onTap: () {
-                index0 = true;
-                index1 = false;
-                index2 = false;
-                index3 = false;
-
-                setState(() {});
+                context
+                    .read<MainScreenBloc>()
+                    .add(MainScreenMahsulotlarEvent());
               },
-              child: ButtonIcon(
-                imagePath: "assets/images/clipboard-text.png",
-                textData: "Mahsulotlar",
-                color: index0 ? tappedColor : defaultColor,
-              ),
+              child: const ButtonIcon(
+                  imagePath: "assets/images/clipboard-text.png",
+                  textData: "Mahsulotlar",
+                  color: tappedColor),
             ),
             InkWell(
               onTap: () {
-                index0 = false;
-                index1 = true;
-                index2 = false;
-                index3 = false;
-                setState(() {});
+                context
+                    .read<MainScreenBloc>()
+                    .add(MainScreenYozishmalarEvent());
               },
-              child: ButtonIcon(
+              child: const ButtonIcon(
                 imagePath: "assets/images/Message.png",
                 textData: "Yozishmalar",
-                color: index1 ? tappedColor : defaultColor,
+                color: defaultColor,
               ),
             ),
             InkWell(
               onTap: () {
-                index0 = false;
-                index1 = false;
-                index2 = true;
-                index3 = false;
-                setState(() {});
+                context.read<MainScreenBloc>().add(MainScreenArxivEvent());
               },
-              child: ButtonIcon(
-                imagePath: "assets/images/timeold.png",
-                textData: "Arxiv",
-                color: index2 ? tappedColor : defaultColor,
-              ),
+              child: const ButtonIcon(
+                  imagePath: "assets/images/timeold.png",
+                  textData: "Arxiv",
+                  color: defaultColor),
             ),
             InkWell(
               onTap: () {
-                index0 = false;
-                index1 = false;
-                index2 = false;
-                index3 = true;
-                setState(() {});
+                context.read<MainScreenBloc>().add(MainScreenSozlamalarEvent());
               },
-              child: ButtonIcon(
+              child: const ButtonIcon(
                 imagePath: "assets/images/setting.png",
                 textData: "Sozlamalar",
-                color: index3 ? tappedColor : defaultColor,
+                color: defaultColor,
               ),
             ),
           ],

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class ButtonIcon extends StatelessWidget {
   final String imagePath;
@@ -15,28 +13,31 @@ class ButtonIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Image.asset(
-          imagePath,
-          width: 28,
-          height: 28,
-          color: color,
-        ),
-        const SizedBox(
-          height: 4,
-        ),
-        Text(
-          textData,
-          style: TextStyle(
+    return SizedBox(
+      width: 80,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            imagePath,
+            width: 28,
+            height: 28,
             color: color,
-            fontSize: 12,
-            fontWeight: FontWeight.w500,
           ),
-        )
-      ],
+          const SizedBox(
+            height: 4,
+          ),
+          Text(
+            textData,
+            style: TextStyle(
+              color: color,
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

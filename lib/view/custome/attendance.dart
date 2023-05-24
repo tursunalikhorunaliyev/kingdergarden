@@ -13,7 +13,6 @@ class Attendance extends StatelessWidget {
     required this.number,
     this.imagePath = "assets/images/group_icon.png",
   });
-  final int vaxt = 20;
   @override
   Widget build(BuildContext context) {
     return Container(

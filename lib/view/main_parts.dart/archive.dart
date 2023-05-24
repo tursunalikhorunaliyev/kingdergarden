@@ -12,6 +12,9 @@ class Archive extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const SizedBox(
+          height: 71,
+        ),
         Column(
           children: [
             Padding(

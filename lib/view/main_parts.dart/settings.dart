@@ -124,7 +124,6 @@ class Settings extends StatelessWidget {
                 ),
               ],
             ),
-            CustomBottomsheet(),
           ],
         ),
       ),
