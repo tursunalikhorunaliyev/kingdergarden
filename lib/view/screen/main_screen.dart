@@ -4,8 +4,8 @@ import 'package:kingdergarden/view/controller/bloc/bloc/main_screen_bloc.dart';
 import 'package:kingdergarden/view/custome/custom_bottomsheet.dart';
 import 'package:kingdergarden/view/main_parts.dart/activities.dart';
 import 'package:kingdergarden/view/main_parts.dart/archive.dart';
+import 'package:kingdergarden/view/main_parts.dart/chatting.dart';
 import 'package:kingdergarden/view/main_parts.dart/settings.dart';
-import 'package:kingdergarden/view/screen/yozishmalar.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
