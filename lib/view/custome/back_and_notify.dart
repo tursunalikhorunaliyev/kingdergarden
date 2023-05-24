@@ -1,12 +1,12 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingdergarden/view/screen/notification_content.dart';
 
 class BackAndNotify extends StatelessWidget {
   final bool isNotify;
   final int notifyCount;
   final bool isDark;
+
   const BackAndNotify({
     super.key,
     required this.isNotify,
@@ -20,6 +20,13 @@ class BackAndNotify extends StatelessWidget {
       onTap: () {
         if (!isNotify) {
           Navigator.pop(context);
+        } else {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const NotificationsContent(),
+            ),
+          );
         }
       },
       child: Container(

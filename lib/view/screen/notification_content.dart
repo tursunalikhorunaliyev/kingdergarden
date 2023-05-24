@@ -1,5 +1,8 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingdergarden/view/custome/back_and_notify.dart';
 import 'package:kingdergarden/view/custome/custom_con_massage.dart';
 
 class NotificationsContent extends StatelessWidget {
@@ -20,11 +23,7 @@ class NotificationsContent extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  "assets/images/arrowBack2.png",
-                  width: 36,
-                  height: 36,
-                ),
+                const BackAndNotify(isNotify: false, isDark: true),
                 const Spacer(),
                 Text(
                   "Xabarlar",
