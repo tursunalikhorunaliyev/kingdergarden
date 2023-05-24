@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:kingdergarden/view/screen/activities.dart';
 import 'package:kingdergarden/view/custome/custom_blur_activities_container.dart';
 
