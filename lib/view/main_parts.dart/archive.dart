@@ -1,8 +1,10 @@
+import 'package:contextmenu/contextmenu.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kingdergarden/view/custome/activities_part_card.dart';
 import 'package:kingdergarden/view/custome/back_and_notify.dart';
 import 'package:kingdergarden/view/custome/parts_tabs.dart';
+import 'package:kingdergarden/view/custome/pop_up.dart';
 import 'package:kingdergarden/view/extra/app_const.dart';
 
 class Archive extends StatelessWidget {
@@ -121,23 +123,29 @@ class Archive extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          "Mashg'ulotlar",
-                          style: GoogleFonts.mulish(
-                            fontSize: 14,
-                            color: const Color(0xFF1E1E1E),
-                          ),
-                        ),
-                        const SizedBox(),
-                        Image.asset(
-                          "assets/images/arrow-down.png",
-                          width: 16,
-                          height: 16,
-                        )
+                    CustomPopUpMenu(
+                      menus: const [
+                        PopupMenuItem(child: Text("Ovqatlar")),
+                        PopupMenuItem(child: Text("Mashg'ulotlar"))
                       ],
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "Mashg'ulotlar",
+                            style: GoogleFonts.mulish(
+                              fontSize: 14,
+                              color: const Color(0xFF1E1E1E),
+                            ),
+                          ),
+                          const SizedBox(),
+                          Image.asset(
+                            "assets/images/arrow-down.png",
+                            width: 16,
+                            height: 16,
+                          )
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 26,

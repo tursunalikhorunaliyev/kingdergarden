@@ -26,6 +26,7 @@ class Chatting extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: ListView.builder(
+            physics: const BouncingScrollPhysics(),
             itemCount: yozishmalarIsmFam.length,
             padding: const EdgeInsets.only(top: 24),
             itemBuilder: (context, index) {
