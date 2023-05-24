@@ -25,10 +25,12 @@ class CustomeBottomSheet extends StatelessWidget {
                         .read<MainScreenBloc>()
                         .add(MainScreenMahsulotlarEvent());
                   },
-                  child: const ButtonIcon(
+                  child: ButtonIcon(
                       imagePath: "assets/images/clipboard-text.png",
                       textData: "Mahsulotlar",
-                      color: tappedColor),
+                      color: state is MainScreenMahsulotlarState
+                          ? tappedColor
+                          : defaultColor),
                 ),
                 InkWell(
                   onTap: () {
@@ -36,20 +38,24 @@ class CustomeBottomSheet extends StatelessWidget {
                         .read<MainScreenBloc>()
                         .add(MainScreenYozishmalarEvent());
                   },
-                  child: const ButtonIcon(
+                  child: ButtonIcon(
                     imagePath: "assets/images/Message.png",
                     textData: "Yozishmalar",
-                    color: defaultColor,
+                    color: state is MainScreenYozishmalarState
+                        ? tappedColor
+                        : defaultColor,
                   ),
                 ),
                 InkWell(
                   onTap: () {
                     context.read<MainScreenBloc>().add(MainScreenArxivEvent());
                   },
-                  child: const ButtonIcon(
+                  child: ButtonIcon(
                       imagePath: "assets/images/timeold.png",
                       textData: "Arxiv",
-                      color: defaultColor),
+                      color: state is MainScreenArxivState
+                          ? tappedColor
+                          : defaultColor),
                 ),
                 InkWell(
                   onTap: () {
@@ -57,10 +63,12 @@ class CustomeBottomSheet extends StatelessWidget {
                         .read<MainScreenBloc>()
                         .add(MainScreenSozlamalarEvent());
                   },
-                  child: const ButtonIcon(
+                  child: ButtonIcon(
                     imagePath: "assets/images/setting.png",
                     textData: "Sozlamalar",
-                    color: defaultColor,
+                    color: state is MainScreenSozlamalarState
+                        ? tappedColor
+                        : defaultColor,
                   ),
                 ),
               ],
