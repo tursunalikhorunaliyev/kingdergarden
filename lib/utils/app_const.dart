@@ -71,16 +71,25 @@ const List<String> yozishmalarIsmFam = [
   "Sadoqat Rahimova",
   "Boltavoy Qo'ldoshev",
   "Shahina Ahmadaliyeva",
+  "Shahina Ahmadaliyeva",
+  "Shahina Ahmadaliyeva",
+  "Shahina Ahmadaliyeva",
 ];
 const List<String> yozishmalarIconPath = [
   "assets/images/child1.png",
   "assets/images/child2.png",
   "assets/images/child2.png",
   "assets/images/child3.png",
+  "assets/images/child3.png",
+  "assets/images/child3.png",
+  "assets/images/child3.png",
 ];
 const List<String> yozishmalarSubTitle = [
   "Assalomu alaykum Dildoras",
   "Qizimiz bugun borolmaydi.",
+  "Shodibekni mashhulotlari qolib ketti",
+  "Shodibekni mashhulotlari qolib ketti",
+  "Shodibekni mashhulotlari qolib ketti",
   "Shodibekni mashhulotlari qolib ketti",
   "To’lovni qilib qo’ydik )))",
 ];

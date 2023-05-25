@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:kingdergarden/utils/app_const.dart';
 import 'package:kingdergarden/view/custome/activities_top.dart';
 import 'package:kingdergarden/view/custome/activities_part_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kingdergarden/view/screen/davomat.dart';
-import '../extra/app_const.dart';
 import 'package:kingdergarden/view/custome/custom_blur_activities_container.dart';
 
 class MainActivities extends StatelessWidget {

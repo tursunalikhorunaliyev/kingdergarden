@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kingdergarden/view/extra/app_const.dart';
+import 'package:kingdergarden/utils/app_const.dart';
 
 class CustomSearch extends StatelessWidget {
   const CustomSearch({super.key});

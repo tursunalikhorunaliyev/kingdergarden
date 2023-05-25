@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kingdergarden/view/custome/added_image.dart';
-
-import 'package:kingdergarden/view/custome/custom_listtile.dart';
 import 'package:kingdergarden/view/custome/game_statis_moth.dart';
-import 'package:kingdergarden/view/main_parts.dart/archive.dart';
 
 class Test extends StatelessWidget {
   const Test({super.key});

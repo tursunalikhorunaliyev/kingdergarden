@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kingdergarden/view/controller/bloc/bloc/main_screen_bloc.dart';
+import 'package:kingdergarden/controller/bloc/bloc/main_screen_bloc.dart';
 import 'package:kingdergarden/view/custome/custom_bottomsheet.dart';
-import 'package:kingdergarden/view/main_parts.dart/activities.dart';
-import 'package:kingdergarden/view/main_parts.dart/archive.dart';
-import 'package:kingdergarden/view/main_parts.dart/chatting.dart';
-import 'package:kingdergarden/view/main_parts.dart/settings.dart';
+import 'package:kingdergarden/view/main_parts/activities.dart';
+import 'package:kingdergarden/view/main_parts/archive.dart';
+import 'package:kingdergarden/view/main_parts/chatting.dart';
+import 'package:kingdergarden/view/main_parts/settings.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kingdergarden/utils/app_const.dart';
 import 'package:kingdergarden/view/custome/activities_top.dart';
 import 'package:kingdergarden/view/custome/cunstom_search.dart';
-import 'package:kingdergarden/view/custome/custom_bottomsheet.dart';
 import 'package:kingdergarden/view/custome/custom_listtile.dart';
-import 'package:kingdergarden/view/extra/app_const.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Chatting extends StatelessWidget {

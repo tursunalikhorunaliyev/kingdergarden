@@ -1,10 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:im_stepper/stepper.dart';
+import 'package:kingdergarden/utils/app_const.dart';
 import 'package:kingdergarden/view/custome/custom_action_button.dart';
 import 'package:kingdergarden/view/custome/slide_text_panel.dart';
-import 'package:kingdergarden/view/extra/app_const.dart';
 import 'package:kingdergarden/view/screen/enter_profile.dart';
 
 class Welcome extends StatefulWidget {
@@ -17,14 +15,13 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   final pageController = PageController();
   int currentIndex = 0;
-////
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: double.infinity,
             child: Image.asset(
